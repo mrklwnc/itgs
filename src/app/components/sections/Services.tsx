@@ -18,13 +18,13 @@ const ServicesSection = () => {
         <div className="flex gap-10 text-mrk-darkblue">
           {/* Cards */}
           <div className="grid grid-rows-2 grid-flow-col gap-6">
-            <ServicesCard span={"row-span-2"} count={1}>
+            <ServicesCard span={"row-span-2"} count={"1"}>
               <Image src={mobile} alt="mobile-app" />
             </ServicesCard>
-            <ServicesCard span={"row-span-1"} count={2}>
+            <ServicesCard span={"row-span-1"} count={"2"}>
               <Image src={web} alt="web-app" />
             </ServicesCard>
-            <ServicesCard span={"row-span-1"} count={3}>
+            <ServicesCard span={"row-span-1"} count={"3"}>
               <Image src={multimedia} alt="multimedia" />
             </ServicesCard>
           </div>
