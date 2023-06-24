@@ -4,10 +4,10 @@ import Image from "next/image";
 import { FC } from "react";
 
 interface SecondaryButtonProps {
-  url: String;
-  size: String;
-  color: String;
-  bg: String;
+  url: string;
+  size: string;
+  color: string;
+  bg: string;
   children: React.ReactNode;
 }
 

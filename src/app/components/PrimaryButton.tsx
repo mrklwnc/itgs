@@ -3,10 +3,10 @@ import Link from "next/link";
 import { FC } from "react";
 
 interface PrimaryButtonProps {
-  url: String;
-  size: String;
-  color: String;
-  bg: String;
+  url: string;
+  size: string;
+  color: string;
+  bg: string;
   children: React.ReactNode;
 }
 
