@@ -1,8 +1,8 @@
 import { FC } from "react";
 
 interface ServicesCardProps {
-  span: string;
-  count: string;
+  span?: string;
+  count?: string;
   children: React.ReactNode;
 }
 

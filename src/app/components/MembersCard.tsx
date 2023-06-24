@@ -2,9 +2,9 @@ import Image from "next/image";
 import { FC } from "react";
 
 interface MembersProps {
-  bg: string;
-  name: string;
-  position: string;
+  bg?: string;
+  name?: string;
+  position?: string;
 }
 
 const MembersCard: FC<MembersProps> = ({ bg, name, position }) => {
