@@ -1,16 +1,19 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 import Navbar from "./Navbar";
-import TailwindIndicator from "./TailwindIndicator";
 import Footer from "./Footer";
-const GeneralLayout: FC = ({ children }) => {
+import TailwindIndicator from "./TailwindIndicator";
+
+interface GeneralLayoutProps {
+  children: ReactNode;
+}
+
+const GeneralLayout: FC<GeneralLayoutProps> = ({ children }) => {
   return (
     <>
       <Navbar />
       {children}
       <Footer />
-      {/* Media Query Indicator */}
-      <TailwindIndicator />
     </>
   );
 };
