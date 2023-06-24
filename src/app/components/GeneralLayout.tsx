@@ -1,7 +1,9 @@
+import { FC } from "react";
+
 import Navbar from "./Navbar";
 import TailwindIndicator from "./TailwindIndicator";
 import Footer from "./Footer";
-const GeneralLayout = ({ children }) => {
+const GeneralLayout: FC = ({ children }) => {
   return (
     <>
       <Navbar />
