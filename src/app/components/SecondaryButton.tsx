@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FC } from "react";
 
 interface SecondaryButtonProps {
-  url?: string;
+  url: string;
   size?: string;
   color?: string;
   bg?: string;

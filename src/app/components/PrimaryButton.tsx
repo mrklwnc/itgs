@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FC } from "react";
 
 interface PrimaryButtonProps {
-  url?: string;
+  url: string;
   size?: string;
   color?: string;
   bg?: string;
