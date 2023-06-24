@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,26 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+html {
+  font-size: 62.5%;
+}
+
+@keyframes bounce-vertical {
+  0%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translateX(-10px);
+    animation-timing-function: ease-out;
+  }
+}
+
+@layer utilities {
+  .animate-bounce-vertical {
+    animation: bounce-vertical 1.5s infinite;
+  }
 }
