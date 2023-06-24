@@ -1,9 +1,25 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import { FC } from "react";
+
+interface SecondaryButtonProps {
+  url: String;
+  size: String;
+  color: String;
+  bg: String;
+  children: React.ReactNode;
+}
+
 import arrow from "./itgs/elements/icons/arrow.svg";
 
-const SecondaryButton = ({ url, color, size, bg, children }) => {
+const SecondaryButton: FC<SecondaryButtonProps> = ({
+  url,
+  size,
+  color,
+  bg,
+  children,
+}) => {
   return (
     <>
       <Link href={url}>

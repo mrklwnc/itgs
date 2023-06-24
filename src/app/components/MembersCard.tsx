@@ -1,6 +1,13 @@
 import Image from "next/image";
+import { FC } from "react";
 
-const MembersCard = ({ bg, name, position }) => {
+interface MembersProps {
+  bg: String;
+  name: String;
+  position: String;
+}
+
+const MembersCard: FC<MembersProps> = ({ bg, name, position }) => {
   return (
     <div
       className={`flex justify-center items-end w-[30rem] h-[40rem] ${bg} bg-cover rounded-xl group hover:scale-110 transition-transform duration-300 ease-in-out shadow-xl hover:shadow-2xl`}

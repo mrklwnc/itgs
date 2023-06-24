@@ -1,6 +1,22 @@
 import Link from "next/link";
 
-const PrimaryButton = ({ url, size, color, bg, children }) => {
+import { FC } from "react";
+
+interface PrimaryButtonProps {
+  url: String;
+  size: String;
+  color: String;
+  bg: String;
+  children: React.ReactNode;
+}
+
+const PrimaryButton: FC<PrimaryButtonProps> = ({
+  url,
+  size,
+  color,
+  bg,
+  children,
+}) => {
   return (
     <>
       <Link

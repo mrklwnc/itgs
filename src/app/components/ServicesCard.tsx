@@ -1,4 +1,12 @@
-const ServicesCard = ({ span, count, children }) => {
+import { FC } from "react";
+
+interface ServicesCardProps {
+  span: String;
+  count: Integer;
+  children: React.ReactNode;
+}
+
+const ServicesCard: FC<ServicesCardProps> = ({ span, count, children }) => {
   return (
     <div
       className={`relative ${span} bg-mrk-shipcove rounded-lg w-[276px] flex justify-center`}
