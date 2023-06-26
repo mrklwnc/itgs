@@ -2,10 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import ServicesCard from "../ServicesCard";
-import mobile from "../itgs/devices/mobile-app.svg";
-import web from "../itgs/devices/web-app.svg";
-import multimedia from "../itgs/devices/multimedia.svg";
-import rockyBorder from "../itgs/elements/rocky-border.svg";
 import PrimaryButton from "../PrimaryButton";
 
 const ServicesSection = () => {
@@ -19,17 +15,32 @@ const ServicesSection = () => {
           {/* Cards */}
           <div className="grid grid-rows-2 grid-flow-col gap-6">
             <ServicesCard span={"row-span-2"} count={"1"}>
-              <Image src={mobile} alt="mobile-app" />
+              <Image
+                src={"/itgs/devices/mobile-app.svg"}
+                alt="mobile-app"
+                width={276}
+                height={380}
+              />
             </ServicesCard>
             <ServicesCard span={"row-span-1"} count={"2"}>
-              <Image src={web} alt="web-app" />
+              <Image
+                src={"/itgs/devices/web-app.svg"}
+                alt="web-app"
+                width={200}
+                height={170}
+              />
             </ServicesCard>
             <ServicesCard span={"row-span-1"} count={"3"}>
-              <Image src={multimedia} alt="multimedia" />
+              <Image
+                src={"/itgs/devices/multimedia.svg"}
+                alt="multimedia"
+                width={234}
+                height={169}
+              />
             </ServicesCard>
           </div>
           <div className="w-[56.5rem]">
-            <h1 className="text-[5.2rem] font-extrabold relative ">
+            <h1 className="text-[4rem] font-extrabold relative ">
               Our Services
               <hr className="w-4/12 border-2 border-mrk-darkblue" />
             </h1>

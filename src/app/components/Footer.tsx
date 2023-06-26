@@ -1,29 +1,32 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "./itgs/logo.svg";
-import settings from "./itgs/elements/icons/settings.svg";
-import support from "./itgs/elements/icons/support.svg";
-import company from "./itgs/elements/icons/building.svg";
-import address from "./itgs/elements/icons/pinpoint.svg";
-
-import linkedin from "./itgs/elements/icons/linkedin.svg";
-import facebook from "./itgs/elements/icons/facebook.svg";
-import twitter from "./itgs/elements/icons/twitter.svg";
-
 const Footer = () => {
   return (
     <footer className="w-full flex flex-col items-center">
       <div className="container mx-auto">
         {/* Links */}
         <div className="flex justify-between gap-[7.3rem] my-[8rem] text-white">
-          <Image src={logo} alt="logo" />
+          <div>
+            <Image
+              src={"/itgs/logo.svg"}
+              alt="logo"
+              width={62.492}
+              height={47.08}
+            />
+          </div>
 
           {/* Services */}
           <Link href="#services">
             <div className="flex flex-col">
               <p className="inline-flex text-[2.4rem] items-center gap-2">
-                Services <Image src={settings} alt="services" />
+                Services{" "}
+                <Image
+                  src={"/itgs/elements/icons/settings.svg"}
+                  alt="services"
+                  width={30}
+                  height={30}
+                />
               </p>
 
               <ul className="text-[1.6rem] font-thin opacity-70">
@@ -37,7 +40,13 @@ const Footer = () => {
           {/* Support */}
           <div className="flex flex-col">
             <p className="inline-flex text-[2.4rem] items-center gap-2">
-              Support <Image src={support} alt="support" />
+              Support{" "}
+              <Image
+                src={"/itgs/elements/icons/support.svg"}
+                alt="support"
+                width={30}
+                height={30}
+              />
             </p>
 
             <ul className="text-[1.6rem] font-thin opacity-70">
@@ -50,7 +59,13 @@ const Footer = () => {
           {/* Company */}
           <div className="flex flex-col">
             <p className="inline-flex text-[2.4rem] items-center gap-2">
-              Company <Image src={company} alt="company" />
+              Company{" "}
+              <Image
+                src={"/itgs/elements/icons/building.svg"}
+                alt="company"
+                width={30}
+                height={30}
+              />
             </p>
 
             <ul className="text-[1.6rem] font-thin opacity-70">
@@ -66,7 +81,13 @@ const Footer = () => {
           {/* Address */}
           <div className="flex flex-col">
             <p className="inline-flex text-[2.4rem] items-center gap-2">
-              Address <Image src={address} alt="address" />
+              Address{" "}
+              <Image
+                src={"/itgs/elements/icons/pinpoint.svg"}
+                alt="address"
+                width={30}
+                height={30}
+              />
             </p>
 
             <ul className="text-[1.6rem] font-thin opacity-70">
@@ -77,11 +98,26 @@ const Footer = () => {
       </div>
       <div className="w-full flex gap-4 flex-col justify-center items-center bg-mrk-darkblue py-7">
         <div className="flex gap-7">
-          <Image src={linkedin} alt="linkedin" />
-          <Image src={facebook} alt="facebook" />
-          <Image src={twitter} alt="twitter" />
+          <Image
+            src={"/itgs/elements/icons/linkedin.svg"}
+            alt="linkedin"
+            width={30}
+            height={30}
+          />
+          <Image
+            src={"/itgs/elements/icons/facebook.svg"}
+            alt="facebook"
+            width={30}
+            height={30}
+          />
+          <Image
+            src={"/itgs/elements/icons/twitter.svg"}
+            alt="twitter"
+            width={30}
+            height={30}
+          />
         </div>
-        <p className="text-white text-[1.8rem]">© Company Name 2023</p>
+        <p className="text-white text-[1.6rem]">© Company Name 2023</p>
       </div>
     </footer>
   );

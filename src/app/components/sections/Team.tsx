@@ -5,7 +5,7 @@ const TeamSection = () => {
       <div className="container mx-auto">
         {/*Cards*/}
         <div className="flex flex-col">
-          <p className="text-[5.2rem] font-bold text-center">Our Team</p>
+          <p className="text-[4rem] font-bold text-center">Our Team</p>
 
           <div className="flex justify-center gap-4">
             <MembersCard

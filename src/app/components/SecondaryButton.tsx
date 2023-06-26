@@ -11,8 +11,6 @@ interface SecondaryButtonProps {
   children: React.ReactNode;
 }
 
-import arrow from "./itgs/elements/icons/arrow.svg";
-
 const SecondaryButton: FC<SecondaryButtonProps> = ({
   url,
   size,
@@ -28,8 +26,10 @@ const SecondaryButton: FC<SecondaryButtonProps> = ({
             {children}
           </span>
           <Image
-            src={arrow}
+            src={"/itgs/elements/icons/arrow.svg"}
             alt="devices"
+            width={30}
+            height={30}
             className="w-[30px] animate-bounce-vertical"
           />
         </div>

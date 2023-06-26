@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import heroSection from "../itgs/devices/hero-section.svg";
 import PrimaryButton from "../PrimaryButton";
 import SecondaryButton from "../SecondaryButton";
 
@@ -10,7 +9,7 @@ const HeroSection = () => {
     <main className="relative min-h-screen flex items-center">
       <div className="container mx-auto">
         <div className="w-[470px] text-white">
-          <h1 className="text-[5.2rem] font-extrabold relative ">
+          <h1 className="text-[5.2rem] font-extrabold ">
             Iteration Global Solutions
             <hr className="w-4/12 border-2" />
           </h1>
@@ -35,8 +34,10 @@ const HeroSection = () => {
       </div>
 
       <Image
-        src={heroSection}
+        src={"/itgs/devices/hero-section.svg"}
         alt="devices"
+        width={1145}
+        height={683}
         className="absolute bottom-0 right-0"
       />
     </main>
