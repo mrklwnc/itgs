@@ -2,9 +2,9 @@ import { FC } from "react";
 import Image from "next/image";
 
 interface CompanyCardProps {
-  icon?: string;
-  title?: string;
-  description?: string;
+  icon: string;
+  title: string;
+  description: string;
 }
 
 const CompanyCard: FC<CompanyCardProps> = ({ icon, title, description }) => {
