@@ -6,7 +6,7 @@ import SecondaryButton from "../SecondaryButton";
 
 const HeroSection = () => {
   return (
-    <main className="relative min-h-screen flex items-center">
+    <main id="hero" className="relative min-h-screen flex items-center">
       <div className="container mx-auto">
         <div className="w-[470px] text-white">
           <h1 className="text-[5.2rem] font-extrabold ">
