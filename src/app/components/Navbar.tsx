@@ -6,26 +6,26 @@ const Navbar = () => {
     <header className="fixed top-0 w-full z-50">
       <div className="bg-mrk-darkblue bg-opacity-70 ">
         <nav className="flex justify-between items-center container mx-auto">
-          <a href="/">
+          <Link href="/">
             <Image
               src={"/itgs/logo.svg"}
               alt="logo"
               width={62.492}
               height={47.08}
             />
-          </a>
+          </Link>
           <ul className="uppercase flex gap-[5.2rem] text-white text-[1.6rem] py-[3rem]">
             <li>
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="#services">Services</Link>
+              <Link href="/#services">Services</Link>
             </li>
             <li>
-              <Link href="#testimonials">Testimonials</Link>
+              <Link href="/#testimonials">Testimonials</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link href="/about">About</Link>
             </li>
             <li>
               <Link href="/contact">Contact Us</Link>

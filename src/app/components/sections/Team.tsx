@@ -25,7 +25,7 @@ const TeamSection = () => {
             />
             <MembersCard
               bg="bg-rayunisky"
-              name="Rayunisky Castro"
+              name="Rayunisky Voces"
               position="Mobile App Developer"
             />
             <MembersCard
