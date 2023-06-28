@@ -129,7 +129,6 @@ const ContactForm = () => {
             </label>
             <textarea
               {...register("message", { required: true })}
-              rows="5"
               className="border-2 border-mrk-chambray text-mrk-chambray p-5 rounded-lg focus:bg-slate-200 text-2xl resize-none"
             ></textarea>
             {errors.message && (
