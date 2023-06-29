@@ -13,7 +13,7 @@ const GeneralLayout: FC<GeneralLayoutProps> = ({ children }) => {
     <>
       <Navbar />
       {children}
-      <TailwindIndicator />
+      {/* <TailwindIndicator /> */}
       <Footer />
     </>
   );
