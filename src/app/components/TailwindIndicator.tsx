@@ -1,4 +1,4 @@
-export default function TailwindIndicator() {
+const TailwindIndicator = () => {
   return (
     <div className="fixed bottom-1 left-1 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800 p-3 font-mono text-white text-2xl">
       <div className="block sm:hidden">xs</div>
@@ -9,4 +9,6 @@ export default function TailwindIndicator() {
       <div className="hidden 2xl:block">2xl</div>
     </div>
   );
-}
+};
+
+export default TailwindIndicator;
