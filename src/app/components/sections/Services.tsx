@@ -40,7 +40,7 @@ const ServicesSection = () => {
             </ServicesCard>
           </div>
           <div className="w-[56.5rem]">
-            <h1 className="text-[4rem] font-extrabold relative ">
+            <h1 className="text-[4rem] font-extrabold ">
               Our Services
               <hr className="w-4/12 border-2 border-mrk-darkblue" />
             </h1>

@@ -17,6 +17,7 @@ module.exports = {
         },
       },
       backgroundImage: {
+        products: "url('/itgs/devices/hero-section.svg')",
         jeneal: "url('/team/Jeneal.png')",
         jayvie: "url('/team/Jayvie.png')",
         lewence: "url('/team/Lewence.png')",
@@ -26,6 +27,10 @@ module.exports = {
         rocketship: "url('/itgs/elements/rocket.svg')",
         dashedline: "url('/itgs/elements/dashed-tools.svg')",
         mailman: "url('/itgs/elements/icons/mail.svg')",
+      },
+      backgroundSize: {
+        large: "80%",
+        16: "4rem",
       },
       keyframes: {
         wave: {

@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className=" bg-white">
+    <section id="testimonials" className="bg-white">
       {/* Container */}
       <div className="container mx-auto flex place-content-center items-center">
         {/* Testimonial */}
-        <div className="w-[90rem] my-[7.3rem] px-10 rounded shadow-lg flex flex-col justify-center items-center py-12 bg-mrk-blacksqueze bg-opacity-30">
+        <div className="w-[90rem] mt-[7.3rem] px-10 rounded shadow-lg flex flex-col justify-center items-center py-12 bg-mrk-blacksqueze bg-opacity-30">
           <Image
             src={"/itgs/markdoe.svg"}
             alt="testimonial"

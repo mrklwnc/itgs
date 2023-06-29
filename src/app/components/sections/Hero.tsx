@@ -6,9 +6,12 @@ import SecondaryButton from "../SecondaryButton";
 
 const HeroSection = () => {
   return (
-    <main id="hero" className="relative min-h-screen flex items-center">
+    <main
+      id="hero"
+      className="relative min-h-screen flex items-center lg:bg-products lg:bg-large xl:bg-auto lg:bg-no-repeat lg:bg-right-bottom"
+    >
       <div className="container mx-auto">
-        <div className="w-[470px] text-white">
+        <div className="w-[47rem] text-white">
           <h1 className="text-[5.2rem] font-extrabold ">
             Iteration Global Solutions
             <hr className="w-4/12 border-2" />
@@ -33,13 +36,13 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <Image
+      {/* <Image
         src={"/itgs/devices/hero-section.svg"}
         alt="devices"
         width={1145}
         height={683}
         className="absolute bottom-0 right-0"
-      />
+      /> */}
     </main>
   );
 };

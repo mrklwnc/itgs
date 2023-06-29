@@ -4,7 +4,7 @@ import PrimaryButton from "../PrimaryButton";
 
 const AboutSection = () => {
   return (
-    <section className="min-h-screen">
+    <section id="about" className="min-h-screen">
       <div className="flex flex-col">
         {/* Office Image */}
         <div className="bg-office bg-cover bg-bottom h-[51.2rem] w-full"></div>
@@ -13,7 +13,7 @@ const AboutSection = () => {
         <div className="container mx-auto">
           <div className="flex flex-col gap-12 mt-8">
             <h1 className="text-[5.2rem] font-extrabold text-white ">
-              About <br /> Iteration Global Solutions
+              About Iteration Global Solutions
               <hr className="w-1/12 border-2" />
             </h1>
 

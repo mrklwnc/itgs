@@ -22,9 +22,13 @@ const SecondaryButton: FC<SecondaryButtonProps> = ({
     <>
       <Link href={url}>
         <div className="flex gap-8">
-          <span className={`text-[${size}] text-${color} bg-${bg}`}>
-            {children}
-          </span>
+          <div className="relative group">
+            <span className={`text-[${size}] text-${color} bg-${bg}`}>
+              {children}
+            </span>
+            <span className="absolute -bottom-2 left-1/2 w-0 h-1 bg-slate-400 xl:group-hover:w-1/2 xl:group-hover:transition-all"></span>
+            <span className="absolute -bottom-2 right-1/2 w-0 h-1 bg-slate-400 xl:group-hover:w-1/2 xl:group-hover:transition-all"></span>
+          </div>
           <Image
             src={"/itgs/elements/icons/arrow.svg"}
             alt="devices"

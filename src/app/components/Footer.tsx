@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import NavItem from "./NavItem";
 
 const Footer = () => {
   return (
@@ -17,25 +18,31 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <Link href="#services">
-            <div className="flex flex-col">
-              <p className="inline-flex text-[2.4rem] items-center gap-2">
-                Services{" "}
-                <Image
-                  src={"/itgs/elements/icons/settings.svg"}
-                  alt="services"
-                  width={30}
-                  height={30}
-                />
-              </p>
+          {/* <Link href="/#services"> */}
+          <div className="flex flex-col">
+            <p className="inline-flex text-[2.4rem] items-center gap-2">
+              Services{" "}
+              <Image
+                src={"/itgs/elements/icons/settings.svg"}
+                alt="services"
+                width={30}
+                height={30}
+              />
+            </p>
 
-              <ul className="text-[1.6rem] font-thin opacity-70">
-                <li>Mobile App Development</li>
-                <li>Web App Development</li>
-                <li>Graphics and Multimedia</li>
-              </ul>
-            </div>
-          </Link>
+            <ul className="flex flex-col gap-2 text-[1.6rem] font-thin opacity-70">
+              <li>
+                <NavItem url="/#services">Mobile App Development</NavItem>
+              </li>
+              <li>
+                <NavItem url="/#services">Web App Development</NavItem>
+              </li>
+              <li>
+                <NavItem url="/#services">Graphics and Multimedia</NavItem>
+              </li>
+            </ul>
+          </div>
+          {/* </Link> */}
 
           {/* Support */}
           <div className="flex flex-col">
@@ -49,12 +56,16 @@ const Footer = () => {
               />
             </p>
 
-            <ul className="text-[1.6rem] font-thin opacity-70">
+            <ul className="flex flex-col gap-2 text-[1.6rem] font-thin opacity-70">
               <li>
-                <Link href="/contact">Contact Us</Link>
+                <NavItem url="/contact">Contact Us</NavItem>
               </li>
-              <li>Terms of Service</li>
-              <li>Privacy Policy</li>
+              <li>
+                <NavItem url="/#">Terms of Service</NavItem>
+              </li>
+              <li>
+                <NavItem url="/#">Privacy Policy</NavItem>
+              </li>
             </ul>
           </div>
 
@@ -70,12 +81,12 @@ const Footer = () => {
               />
             </p>
 
-            <ul className="text-[1.6rem] font-thin opacity-70">
+            <ul className="flex flex-col gap-2 text-[1.6rem] font-thin opacity-70">
               <li>
-                <Link href="/about">About Us</Link>
+                <NavItem url="/about">About Us</NavItem>
               </li>
               <li>
-                <Link href="#team">Our Team</Link>
+                <NavItem url="/#team">Our Team</NavItem>
               </li>
             </ul>
           </div>
@@ -126,7 +137,9 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <p className="text-white text-[1.6rem]">© Company Name 2023</p>
+        <p className="text-white text-[1.6rem]">
+          © ITeration Global Solutions 2023
+        </p>
       </div>
     </footer>
   );

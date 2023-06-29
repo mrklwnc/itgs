@@ -137,24 +137,24 @@ const ContactForm = () => {
               </span>
             )}
           </div>
-        </div>
 
-        <div>
-          <button
-            type="submit"
-            className="bg-mrk-chambray text-white text-[1.8rem] px-6 py-4 rounded-lg group"
-          >
-            <div className="flex gap-4 items-center">
-              Send Message
-              <Image
-                src="/itgs/elements/icons/send.svg"
-                alt="send icon"
-                width={30}
-                height={30}
-                className="transition group-hover:animate-waving-hand"
-              />
-            </div>
-          </button>
+          <div>
+            <button
+              type="submit"
+              className="text-[1.8rem] shadow-[0_9px_0_#1B263B] hover:shadow-[0_4px_0px_#1B263B] text-white px-6 py-4 bg-mrk-chambray ease-out hover:translate-y-1 transition-all rounded-lg group"
+            >
+              <div className="flex gap-4 items-center">
+                Send Message
+                <Image
+                  src="/itgs/elements/icons/send.svg"
+                  alt="send icon"
+                  width={30}
+                  height={30}
+                  className="transition group-hover:animate-waving-hand"
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </form>
 

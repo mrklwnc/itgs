@@ -4,8 +4,8 @@ const TeamSection = () => {
     <section id="team" className="min-h-screen flex items-center bg-white">
       <div className="container mx-auto">
         {/*Cards*/}
-        <div className="flex flex-col">
-          <p className="text-[4rem] font-bold text-center">Our Team</p>
+        <div className="flex flex-col gap-10">
+          <h2 className="text-[4rem] font-bold text-center">Our Team</h2>
 
           <div className="flex justify-center gap-4">
             <MembersCard

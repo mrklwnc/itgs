@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ContactSection = () => {
   return (
-    <section className="min-h-screen flex items-center">
+    <section id="contact" className="min-h-screen flex items-center">
       <div className="relative container mx-auto flex justify-center">
         {/* Contact Form */}
         <div className="flex h-[68rem] w-10/12">
