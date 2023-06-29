@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrollDirection === "down"
+        scrollDirection !== "down"
           ? "opacity-100 translate-y-0"
           : "opacity-0 -translate-y-full"
       }`}

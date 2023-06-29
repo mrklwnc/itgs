@@ -2,33 +2,43 @@
 
 import { useState, useEffect } from "react";
 
-export default function useScroll() {
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [bodyOffset, setBodyOffset] = useState<DOMRect>(
-    document.body.getBoundingClientRect()
-  );
-  const [scrollY, setScrollY] = useState<number>(bodyOffset.top);
-  const [scrollX, setScrollX] = useState<number>(bodyOffset.left);
-  const [scrollDirection, setScrollDirection] = useState<string>("down");
-
-  const listener = () => {
-    setBodyOffset(document.body.getBoundingClientRect());
-    setScrollY(-bodyOffset.top);
-    setScrollX(bodyOffset.left);
-    setScrollDirection(lastScrollTop > -bodyOffset.top ? "down" : "up");
-    setLastScrollTop(-bodyOffset.top);
-  };
+const useScroll = () => {
+  const isClient = typeof window === "object";
+  const [scrollY, setScrollY] = useState(0);
+  const [scrollX, setScrollX] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("up");
 
   useEffect(() => {
-    window.addEventListener("scroll", listener);
-    return () => {
-      window.removeEventListener("scroll", listener);
-    };
-  });
+    if (!isClient) {
+      return;
+    }
 
-  return {
-    scrollY,
-    scrollX,
-    scrollDirection,
-  };
-}
+    const handleScroll = () => {
+      const currentScrollY = window.pageYOffset;
+      const currentScrollX = window.pageXOffset;
+
+      setScrollDirection((prevDirection) => {
+        if (currentScrollY > scrollY && prevDirection !== "down") {
+          return "down";
+        }
+        if (currentScrollY < scrollY && prevDirection !== "up") {
+          return "up";
+        }
+        return prevDirection;
+      });
+
+      setScrollY(currentScrollY);
+      setScrollX(currentScrollX);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isClient, scrollY]);
+
+  return { scrollY, scrollX, scrollDirection };
+};
+
+export default useScroll;
