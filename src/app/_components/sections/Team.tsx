@@ -1,4 +1,5 @@
 import MembersCard from "../MembersCard";
+
 const TeamSection = () => {
   return (
     <section id="team" className="min-h-screen flex items-center bg-white">

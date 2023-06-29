@@ -1,9 +1,9 @@
-import HeroSection from "./components/sections/Hero";
-import ServicesSection from "./components/sections/Services";
-import ToolsSection from "./components/sections/Tools";
-import TestimonialsSection from "./components/sections/Testimonials";
-import GeneralLayout from "./components/GeneralLayout";
-import TeamSection from "./components/sections/Team";
+import HeroSection from "./_components/sections/Hero";
+import ServicesSection from "./_components/sections/Services";
+import ToolsSection from "./_components/sections/Tools";
+import TestimonialsSection from "./_components/sections/Testimonials";
+import GeneralLayout from "./_components/GeneralLayout";
+import TeamSection from "./_components/sections/Team";
 
 export default function Home() {
   return (

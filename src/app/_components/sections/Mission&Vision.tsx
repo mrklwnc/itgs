@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 const MissionAndVisionSection = () => {
   return (
     <section className="min-h-screen flex items-center">

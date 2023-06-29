@@ -1,6 +1,7 @@
 import Image from "next/image";
-import ContactForm from "../ContactForm";
 import Link from "next/link";
+
+import ContactForm from "../ContactForm";
 
 const ContactSection = () => {
   return (

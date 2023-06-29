@@ -1,10 +1,11 @@
 "use client";
 
+import { FC } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
-import useScroll from "../libs/useScroll";
+import useScroll from "../_libs/useScroll";
 import NavItem from "./NavItem";
-import { FC } from "react";
 
 const Navbar = () => {
   // Hide on Scroll Down
