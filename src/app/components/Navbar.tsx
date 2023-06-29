@@ -6,7 +6,7 @@ import useScroll from "../libs/useScroll";
 import NavItem from "./NavItem";
 import { CSSProperties, FC } from "react";
 
-const Navbar: FC = () => {
+const Navbar = () => {
   // Hide on Scroll Down
   const { scrollY, scrollX, scrollDirection } = useScroll();
 
