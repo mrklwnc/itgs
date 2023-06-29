@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import useScroll from "../libs/useScroll";
 import NavItem from "./NavItem";
-import { FC } from "react";
+import React, { FC, CSSProperties } from "react";
 
 const Navbar = () => {
   // Hide on Scroll Down
