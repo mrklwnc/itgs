@@ -10,7 +10,7 @@ const Navbar = () => {
   const { scrollY, scrollX, scrollDirection } = useScroll();
 
   interface AnimationStyles {
-    visibility: Visibility;
+    visibility: string;
     transition: string;
     opacity: string;
     transform?: string;
