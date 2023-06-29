@@ -10,7 +10,7 @@ const Navbar = () => {
   const { scrollY, scrollX, scrollDirection } = useScroll();
 
   interface AnimationStyles {
-    visibility: string;
+    visibility: "visible" | "hidden" | "collapse" | "initial" | "inherit";
     transition: string;
     opacity: string;
     transform?: string;
