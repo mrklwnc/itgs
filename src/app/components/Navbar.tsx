@@ -4,33 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import useScroll from "../libs/useScroll";
 import NavItem from "./NavItem";
-import { CSSProperties, FC } from "react";
+import { FC } from "react";
 
 const Navbar = () => {
   // Hide on Scroll Down
   const { scrollY, scrollX, scrollDirection } = useScroll();
 
-  const styles: {
-    active: CSSProperties;
-    hidden: CSSProperties;
-  } = {
-    active: {
-      visibility: "visible",
-      transition: "all 0.5s",
-      opacity: "1",
-    },
-    hidden: {
-      visibility: "hidden",
-      transition: "all 0.5s",
-      transform: "translateY(-100%)",
-      opacity: "0",
-    },
-  };
-
   return (
     <header
-      className="fixed top-0 w-full z-50"
-      style={scrollDirection === "down" ? styles.active : styles.hidden}
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrollDirection === "down"
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-full"
+      }`}
     >
       <div className="bg-mrk-darkblue bg-opacity-70 ">
         <nav className="flex justify-between items-center container mx-auto transition-all duration-[350] ease-in">
