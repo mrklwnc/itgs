@@ -4,13 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import useScroll from "../libs/useScroll";
 import NavItem from "./NavItem";
-import { FC } from "react";
+import { CSSProperties, FC } from "react";
 
-const Navbar = () => {
+const Navbar: FC = () => {
   // Hide on Scroll Down
   const { scrollY, scrollX, scrollDirection } = useScroll();
 
-  const styles = {
+  const styles: {
+    active: CSSProperties;
+    hidden: CSSProperties;
+  } = {
     active: {
       visibility: "visible",
       transition: "all 0.5s",
