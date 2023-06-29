@@ -7,7 +7,7 @@ import NavItem from "./NavItem";
 
 const Navbar = () => {
   // Hide on Scroll Down
-  const { y, x, scrollDirection } = useScroll();
+  const { scrollY, scrollX, scrollDirection } = useScroll();
 
   const styles = {
     active: {
