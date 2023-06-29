@@ -9,7 +9,17 @@ const Navbar = () => {
   // Hide on Scroll Down
   const { scrollY, scrollX, scrollDirection } = useScroll();
 
-  const styles = {
+  interface AnimationStyles {
+    visibility: Visibility;
+    transition: string;
+    opacity: string;
+    transform?: string;
+  }
+
+  const styles: {
+    active: AnimationStyles;
+    hidden: AnimationStyles;
+  } = {
     active: {
       visibility: "visible",
       transition: "all 0.5s",
