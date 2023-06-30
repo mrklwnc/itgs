@@ -13,6 +13,8 @@ const useScroll = () => {
       return;
     }
 
+    console.log(scrollDirection);
+
     const handleScroll = () => {
       const currentScrollY = window.pageYOffset;
       const currentScrollX = window.pageXOffset;

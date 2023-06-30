@@ -1,15 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BackToTop = () => {
+  const isClient = typeof window === "object";
   const [style, setStyle] = useState<string>("");
 
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {
     scrollFunction();
   };
+
+  useEffect(() => {
+    if (!isClient) {
+      return;
+    }
+  }, [isClient]);
 
   const scrollFunction = () => {
     if (
@@ -30,7 +37,7 @@ const BackToTop = () => {
   return (
     <button
       onClick={topFunction}
-      className={`fixed bottom-5 right-5 z-10 px-5 py-6 rounded-full bg-mrk-shipcove bg-opacity-70 ${style} animate-bounce hover:bg-black hover:bg-opacity-50`}
+      className={`fixed bottom-5 right-5 z-10 px-5 py-6 rounded-full bg-mrk-shipcove bg-opacity-70 ${style} transition duration-300 hover:bg-black hover:bg-opacity-50`}
     >
       <Image
         src="/itgs/elements/icons/arrow.svg"
