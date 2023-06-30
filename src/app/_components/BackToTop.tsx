@@ -4,30 +4,30 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const BackToTop = () => {
-  const isClient = typeof window === "object";
-  const [style, setStyle] = useState<string>("");
-
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function () {
-    scrollFunction();
-  };
+  const [style, setStyle] = useState<string>(
+    "invisible transition duration-500 opacity-0"
+  );
 
   useEffect(() => {
-    if (!isClient) {
-      return;
-    }
-  }, [isClient]);
+    const scrollFunction = () => {
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        setStyle("visibile transition duration-500 opacity-100");
+      } else {
+        setStyle("invisible transition duration-500 opacity-0");
+      }
+    };
 
-  const scrollFunction = () => {
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      setStyle("visibile transition duration-500 opacity-100");
-    } else {
-      setStyle("invisible transition duration-500 opacity-0");
-    }
-  };
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.addEventListener("scroll", scrollFunction);
+
+    return () => {
+      // Cleanup the scroll event listener when the component is unmounted
+      window.removeEventListener("scroll", scrollFunction);
+    };
+  }, []);
 
   const topFunction = () => {
     document.body.scrollTop = 0; // Safari
